@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>シフト確認</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" th:href="@{/css/reset.css}">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+	<h2>マイページ</h2>
+	<nav>
+		<ul>
+			<li><a href="http://localhost:8080/">マイページ＞</a></li>
+			<li>シフト確認</li>
+		</ul>
+		<form class="index_form" th:action="@{/logout}" method="post">
+			<input class="logout_btn" type="submit" value="ログアウト">
+		</form>
+	</nav>
+</body>
+</html>

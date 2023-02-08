@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ログイン</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" th:href="@{/css/reset.css}">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+	<h2>ログイン</h2>
+	<form class="login_form" th:action="@{/login}" method="post">
+		<div class="error" th:if="${param.error}">
+			<p>IDまたはパスワードが正しくありません。</p>
+		</div>
+		<div class="logout" th:if="${param.logout}">
+			<p>ログアウトしました</p>
+		</div>
+		<input type="text" name="user_id" placeholder="ID" required> <input
+			type="password" name="password" placeholder="パスワード" required>
+		<input class="login-btn" type="submit" value="ログイン">
+	</form>
+</body>
+</html>

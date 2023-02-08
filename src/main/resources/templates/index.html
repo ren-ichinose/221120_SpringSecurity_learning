@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>マイページ</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" th:href="@{/css/reset.css}">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+	<h2>マイページ</h2>
+	<nav>
+		<ul>
+			<li>マイページ</li>
+		</ul>
+		<form class="index_form" th:action="@{/logout}" method="post">
+			<input class="logout_btn" type="submit" value="ログアウト">
+		</form>
+	</nav>
+	<div class="index_menu">
+		<div class="index_register">
+			<a href="http://localhost:8080/register">シフト登録</a>
+		</div>
+		<div class="index_schedule">
+			<a href="http://localhost:8080/schedule">シフト確認</a>
+		</div>
+	</div>
+</body>
+</html>
